@@ -8,6 +8,7 @@ def gauss_dist_mat(shape, freq):
     x = np.arange(n)
     y = np.arange(m)
     X, Y = np.meshgrid(x, y)
+    print(x,y)
     
     dist_mat = np.sqrt((X - cx)**2 + (Y - cy)**2) # distance matrix
     gauss_mat = 1 - np.exp(- (dist_mat**2) / (2 * (freq**2))) # gaussian matrix
